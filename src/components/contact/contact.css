@@ -1,0 +1,24 @@
+body {
+    background: #0a0109;
+}
+
+i {
+    color: rgb(6, 255, 222);
+}
+
+.modal-header {
+    background: rgb(58,180,167);
+    background: linear-gradient(90deg, rgba(58,180,167,1) 0%, rgba(234,108,255,1) 50%, rgba(7,1,11,1) 100%);    
+}
+
+.modal-content {
+    background: rgb(32, 31, 31);
+}
+
+.sendForm {
+    background: rgb(77, 73, 75);
+}
+
+.sendForm:hover {
+    background: rgba(234,108,255);
+}
