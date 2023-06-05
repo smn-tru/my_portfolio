@@ -14,7 +14,7 @@ body {
     }
 }
 
-a {
+.menu a {
     color: aqua;
     background: rgb(58,180,167);
     background: linear-gradient(45deg, rgba(58,180,167,1) 0%, rgba(234,108,255,1) 50%, rgba(7,1,11,1) 100%);

@@ -10,7 +10,7 @@ import './menu.css';
 function Menu(){
 
     const contactModalHandler = () => { 
-        const contactDialog = new Modal("#contactDialog");
+        const contactDialog = new Modal("#contactModal");
         contactDialog.show(); 
     };
 
