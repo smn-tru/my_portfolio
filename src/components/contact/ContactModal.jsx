@@ -60,9 +60,9 @@ function ContactModal(){
                 confirmButtonColor: "#ea6cff",
                 color: "#000000",
                 background: `linear-gradient(90deg, rgba(36,233,210,0.6157670454545454) 0%, rgba(225,107,245,1) 50%, rgba(209,230,53,1) 100%)`,
-              })
-          });
-      }
+            })
+        });
+    }
     
 
     return(
@@ -150,7 +150,6 @@ function ContactModal(){
                                             <label className="validate-field">
                                                 <ErrorMessage name="name" component="div" className="has-error" />
                                             </label>
-                                           
                                         </div>
                                     
                                         <div className="md-form mb-2">
