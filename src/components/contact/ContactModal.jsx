@@ -1,12 +1,11 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
-//import PropTypes from 'prop-types';
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import emailjs from 'emailjs-com';
 import swal from 'sweetalert2';
-
+import toastr from "toastr";
 
 import "./contact.css"
 
@@ -17,10 +16,6 @@ function ContactModal(){
         subject: "",
         message: "",
     });
-
-    const submitHandler = () => {
-        console.log("submitHandler clicked")
-    };
 
     const changeHandler = (e) => {
         const { name, value } = e.target;
@@ -38,21 +33,6 @@ function ContactModal(){
         message: Yup.string().required('Required'),
     });
 
-    /*const copyToClipboard = (containerid) => {
-        if (document.selection) {
-          var range = document.body.createTextRange();
-          range.moveToElementText(document.getElementById(containerid));
-          range.select().createTextRange();
-          document.execCommand("copy");
-        } else if (window.getSelection) {
-          range = document.createRange();
-          range.selectNode(document.getElementById(containerid));
-          window.getSelection().addRange(range);
-          document.execCommand("copy");
-          alert("Text has been copied, now paste in the text-area")
-        }
-      }*/
-
     const sendEmail = (e) => {
         e.preventDefault(); 
     
@@ -64,6 +44,8 @@ function ContactModal(){
                 text: `Your message is on it's way`,
                 showConfirmButton: false,
                 timer: 2500,
+                color: "#000000",
+                background: `linear-gradient(90deg, rgba(36,233,210,0.6157670454545454) 0%, rgba(225,107,245,1) 50%, rgba(209,230,53,1) 100%)`,
             });
             setTimeout(()=>{
                 window.location.reload(); //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
@@ -76,6 +58,8 @@ function ContactModal(){
                 text: 'Something went wrong!',
                 footer: 'please try again or select another form of communication',
                 confirmButtonColor: "#ea6cff",
+                color: "#000000",
+                background: `linear-gradient(90deg, rgba(36,233,210,0.6157670454545454) 0%, rgba(225,107,245,1) 50%, rgba(209,230,53,1) 100%)`,
               })
           });
       }
@@ -158,11 +142,11 @@ function ContactModal(){
                             <Formik 
                                 enableReinitialize={true}
                                 initialValues={formData}
-                                onSubmit={submitHandler}
+                                //onSubmit={submitHandler}
                                 validationSchema={emailFormSchema}>
                                     <Form className="emailForm" onSubmit={sendEmail}>
                                         <div className="md-form mb-2">
-                                            <Field type="text" id="nameField" name="name" value={formData.name} className="form-control validate" placeholder="name" onChange={changeHandler} />
+                                            <Field required type="text" id="nameField" name="name" value={formData.name} className="form-control validate" placeholder="name" onChange={changeHandler} />
                                             <label className="validate-field">
                                                 <ErrorMessage name="name" component="div" className="has-error" />
                                             </label>
@@ -170,21 +154,21 @@ function ContactModal(){
                                         </div>
                                     
                                         <div className="md-form mb-2">
-                                            <Field type="email" id="emailField" name="email" value={formData.email} className="form-control validate" placeholder="email" onChange={changeHandler}/>
+                                            <Field required type="email" id="emailField" name="email" value={formData.email} className="form-control validate" placeholder="email" onChange={changeHandler}/>
                                             <label className="validate-field">
                                                 <ErrorMessage name="email" component="div" className="has-error" />
                                             </label>
                                         </div>
 
                                         <div className="md-form mb-2">
-                                            <Field type="text" id="subjectField" name="subject" value={formData.subject} className="form-control validate" placeholder="subject" onChange={changeHandler} />
+                                            <Field required type="text" id="subjectField" name="subject" value={formData.subject} className="form-control validate" placeholder="subject" onChange={changeHandler} />
                                             <label className="validate-field">
                                                 <ErrorMessage name="subject" component="div" className="has-error" />
                                             </label>
                                         </div>
 
                                         <div className="md-form">
-                                            <textarea type="textarea" id="messageField" name="message" value={formData.message} className="md-textarea form-control" rows="4" placeholder="message" onChange={changeHandler}></textarea>
+                                            <textarea required type="textarea" id="messageField" name="message" value={formData.message} className="md-textarea form-control" rows="4" placeholder="message" onChange={changeHandler}></textarea>
                                             <label className="validate-field">
                                                 <ErrorMessage name="message" component="div" className="has-error" />
                                             </label>
@@ -202,7 +186,12 @@ function ContactModal(){
                                 <div className="card-header">slack handler</div>
                                 <div className="card-body">
                                     @Sandra Truong
-                                    <a className="copy-to-clipboard"><i className="fa-regular fa-copy ml-2"></i></a>
+                                    <a className="copy-to-clipboard" 
+                                    onClick={() => {
+                                        navigator.clipboard.writeText("@Sandra Truong"); 
+                                        toastr.info("Copied to clipboard.");}}>
+                                            <i className="fa-regular fa-copy ml-2"/>
+                                    </a>
                                 </div>
                                 <div className="modal-footer d-flex justify-content-center"></div>
                             </div>
@@ -213,7 +202,12 @@ function ContactModal(){
                                 <div className="card-header">contact number</div>
                                 <div className="card-body">
                                     3038018019
-                                    <a className="copy-to-clipboard"><i className="fa-regular fa-copy ml-2"></i></a>
+                                    <a className="copy-to-clipboard" 
+                                    onClick={() => {
+                                        navigator.clipboard.writeText("3038018019"); 
+                                        toastr.info("Copied to clipboard.");}}>
+                                            <i className="fa-regular fa-copy ml-2"/>
+                                    </a>
                                 </div>
                                 <div className="modal-footer d-flex justify-content-center"></div>
                             </div> 
@@ -225,7 +219,12 @@ function ContactModal(){
                                 <div className="card-header">email address</div>
                                 <div className="card-body">
                                     sandra.mntru@gmail.com
-                                    <a className="copy-to-clipboard"><i className="fa-regular fa-copy ml-2"/></a>
+                                    <a className="copy-to-clipboard" 
+                                    onClick={() => {
+                                        navigator.clipboard.writeText("sandra.mntru@gmail.com"); 
+                                        toastr.info("Copied to clipboard.");}}>
+                                            <i className="fa-regular fa-copy ml-2"/>
+                                    </a>
                                 </div>
                                 <div className="modal-footer d-flex justify-content-center"></div>
                             </div> 
