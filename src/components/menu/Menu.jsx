@@ -14,6 +14,11 @@ function Menu(){
         contactDialog.show(); 
     };
 
+    const aboutModalHandler = () => { 
+        const aboutMeDialog = new Modal("#aboutMeModal");
+        aboutMeDialog.show(); 
+    };
+
     return ( 
         <>
         <nav className='menu'>
@@ -24,7 +29,7 @@ function Menu(){
                 <span className='lines line-3'></span>
         </label>
 
-        <a href='#' id='aboutMe' className='menu-item' onClick={()=>console.log("AboutMe")}><i className="fa-regular fa-id-card" /></a> 
+        <a href='#' id='aboutMe' className='menu-item' onClick={aboutModalHandler}><i className="fa-regular fa-id-card" /></a> 
         <a href='#' id='work' className='menu-item' onClick={()=>console.log("WorkExperience")}><i className='fa-solid fa-laptop-code' /></a> 
         <a href='#' id='skills' className='menu-item' onClick={()=>console.log("Skills")}><i className='fa-solid fa-rectangle-list' /></a>
         <a href='#' id='contact' className='menu-item' onClick={contactModalHandler}><i className='fa-regular fa-paper-plane' /></a> 
