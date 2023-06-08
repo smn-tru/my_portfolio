@@ -4,6 +4,9 @@ import React, { useState } from "react";
 //import PropTypes from 'prop-types';
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import emailjs from 'emailjs-com';
+import swal from 'sweetalert2';
+
 
 import "./contact.css"
 
@@ -14,8 +17,6 @@ function ContactModal(){
         subject: "",
         message: "",
     });
-
-    console.log(setFormData);
 
     const submitHandler = () => {
         console.log("submitHandler clicked")
@@ -37,6 +38,49 @@ function ContactModal(){
         message: Yup.string().required('Required'),
     });
 
+    /*const copyToClipboard = (containerid) => {
+        if (document.selection) {
+          var range = document.body.createTextRange();
+          range.moveToElementText(document.getElementById(containerid));
+          range.select().createTextRange();
+          document.execCommand("copy");
+        } else if (window.getSelection) {
+          range = document.createRange();
+          range.selectNode(document.getElementById(containerid));
+          window.getSelection().addRange(range);
+          document.execCommand("copy");
+          alert("Text has been copied, now paste in the text-area")
+        }
+      }*/
+
+    const sendEmail = (e) => {
+        e.preventDefault(); 
+    
+        emailjs.sendForm('service_filwc25', 'template_r97wcao', e.target, 'pHjyvkO7w9Q7xvy3F')
+          .then((result) => {
+            swal.fire({
+                icon: 'success',
+                title: 'Sweet!',
+                text: `Your message is on it's way`,
+                showConfirmButton: false,
+                timer: 2500,
+            });
+            setTimeout(()=>{
+                window.location.reload(); //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
+            }, 2500)    
+          }, (error) => {
+              console.log(error.text);
+              swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+                footer: 'please try again or select another form of communication',
+                confirmButtonColor: "#ea6cff",
+              })
+          });
+      }
+    
+
     return(
        <>
         <div className="modal fade" id="contactModal" tabIndex="-1" role="dialog" aria-labelledby="contactModal" aria-hidden="true">
@@ -51,6 +95,7 @@ function ContactModal(){
                 <div className="modal-body mx-3">
                     <div className="row row-cols-2">
                         <div className="col-2">
+
                         <ul className="nav nav-pills flex-column" role="tablist">
                             <li className="nav-item mb-2">
                                 <a href='#' 
@@ -115,7 +160,7 @@ function ContactModal(){
                                 initialValues={formData}
                                 onSubmit={submitHandler}
                                 validationSchema={emailFormSchema}>
-                                    <Form className="emailForm">
+                                    <Form className="emailForm" onSubmit={sendEmail}>
                                         <div className="md-form mb-2">
                                             <Field type="text" id="nameField" name="name" value={formData.name} className="form-control validate" placeholder="name" onChange={changeHandler} />
                                             <label className="validate-field">
@@ -159,6 +204,7 @@ function ContactModal(){
                                     @Sandra Truong
                                     <a className="copy-to-clipboard"><i className="fa-regular fa-copy ml-2"></i></a>
                                 </div>
+                                <div className="modal-footer d-flex justify-content-center"></div>
                             </div>
                         </div>
                             
@@ -169,6 +215,7 @@ function ContactModal(){
                                     3038018019
                                     <a className="copy-to-clipboard"><i className="fa-regular fa-copy ml-2"></i></a>
                                 </div>
+                                <div className="modal-footer d-flex justify-content-center"></div>
                             </div> 
                         </div>
 
@@ -178,9 +225,9 @@ function ContactModal(){
                                 <div className="card-header">email address</div>
                                 <div className="card-body">
                                     sandra.mntru@gmail.com
-                                    <a className="copy-to-clipboard"><i className="fa-regular fa-copy ml-2"></i></a>
+                                    <a className="copy-to-clipboard"><i className="fa-regular fa-copy ml-2"/></a>
                                 </div>
-                                
+                                <div className="modal-footer d-flex justify-content-center"></div>
                             </div> 
                         </div>
                             
