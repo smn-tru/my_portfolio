@@ -2,7 +2,9 @@
 import React from 'react';
 import { Modal } from 'bootstrap';
 
+import AboutMeModal from '../aboutMe/AboutMeModal';
 import ContactModal from '../contact/ContactModal';
+
 
 import './menu.css';
 
@@ -10,13 +12,13 @@ import './menu.css';
 function Menu(){
 
     const contactModalHandler = () => { 
-        const contactDialog = new Modal("#contactModal");
-        contactDialog.show(); 
+        const contactModal = new Modal("#contactModal");
+        contactModal.show(); 
     };
 
-    const aboutModalHandler = () => { 
-        const aboutMeDialog = new Modal("#aboutMeModal");
-        aboutMeDialog.show(); 
+    const aboutMeModalHandler = () => { 
+        const aboutMeModal = new Modal("#aboutMeModal");
+        aboutMeModal.show(); 
     };
 
     return ( 
@@ -29,7 +31,7 @@ function Menu(){
                 <span className='lines line-3'></span>
         </label>
 
-        <a href='#' id='aboutMe' className='menu-item' onClick={aboutModalHandler}><i className="fa-regular fa-id-card" /></a> 
+        <a href='#' id='aboutMe' className='menu-item' onClick={aboutMeModalHandler}><i className="fa-regular fa-id-card" /></a> 
         <a href='#' id='work' className='menu-item' onClick={()=>console.log("WorkExperience")}><i className='fa-solid fa-laptop-code' /></a> 
         <a href='#' id='skills' className='menu-item' onClick={()=>console.log("Skills")}><i className='fa-solid fa-rectangle-list' /></a>
         <a href='#' id='contact' className='menu-item' onClick={contactModalHandler}><i className='fa-regular fa-paper-plane' /></a> 
@@ -39,6 +41,7 @@ function Menu(){
         </nav>
 
         <ContactModal />
+        <AboutMeModal />
     </>
     )
 
