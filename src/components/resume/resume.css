@@ -1,0 +1,9 @@
+.resume-section .btn {
+    background: rgb(77, 73, 75) !important;
+    border: 0px;
+    margin-bottom: 10px;
+}
+
+.resume-section .btn:hover {
+    background: rgba(234,108,255) !important;
+}

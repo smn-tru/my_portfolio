@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 
 import "./aboutme.css"
@@ -10,9 +11,9 @@ function AboutMeModal() {
                 <div className="modal-content">
                     <div className="modal-header text-center">
                         <h4 className="modal-title w-100 font-weight-bold">About Me</h4>
-                        <button type="button" className="close" data-bs-dismiss="modal" aria-label="Close">
-                            <span className="close-modal" aria-hidden="true"><i className="fa-regular fa-circle-xmark" /></span>
-                        </button>
+                        <a type="button" className="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span className="close-modal" aria-hidden="true"><i className="fa-regular fa-circle-xmark fa-xl" /></span>
+                        </a>
                     </div>
                     <div className="modal-body mx-3">
                         <div className="container">
