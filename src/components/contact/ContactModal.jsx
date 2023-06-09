@@ -72,9 +72,9 @@ function ContactModal(){
                 <div className="modal-content">
                 <div className="modal-header text-center">
                     <h4 className="modal-title w-100 font-weight-bold">Contact</h4>
-                    <button type="button" className="close" data-bs-dismiss="modal" aria-label="Close">
-                        <span className="close-modal" aria-hidden="true"><i className="fa-regular fa-circle-xmark" /></span>
-                    </button>
+                    <a type="button" className="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span className="close-modal" aria-hidden="true"><i className="fa-regular fa-circle-xmark fa-xl" /></span>
+                    </a>
                 </div>
                 <div className="modal-body mx-3">
                     <div className="row row-cols-2">
@@ -189,7 +189,7 @@ function ContactModal(){
                                     onClick={() => {
                                         navigator.clipboard.writeText("@Sandra Truong"); 
                                         toastr.info("Copied to clipboard.");}}>
-                                            <i className="fa-regular fa-copy ml-2"/>
+                                            <i className="fa-regular fa-copy m-2"/>
                                     </a>
                                 </div>
                                 <div className="modal-footer d-flex justify-content-center"></div>
@@ -205,7 +205,7 @@ function ContactModal(){
                                     onClick={() => {
                                         navigator.clipboard.writeText("3038018019"); 
                                         toastr.info("Copied to clipboard.");}}>
-                                            <i className="fa-regular fa-copy ml-2"/>
+                                            <i className="fa-regular fa-copy m-2"/>
                                     </a>
                                 </div>
                                 <div className="modal-footer d-flex justify-content-center"></div>
@@ -222,7 +222,7 @@ function ContactModal(){
                                     onClick={() => {
                                         navigator.clipboard.writeText("sandra.mntru@gmail.com"); 
                                         toastr.info("Copied to clipboard.");}}>
-                                            <i className="fa-regular fa-copy ml-2"/>
+                                            <i className="fa-regular fa-copy m-2"/>
                                     </a>
                                 </div>
                                 <div className="modal-footer d-flex justify-content-center"></div>
