@@ -38,15 +38,15 @@ function ResumeModal(){
                         >
                             &nbsp;Download Resume
                         </Button>
-                    <Row className="resume">
+                        <Row className="resume">
                 {/* this component takes the link provided above and renders it on your page */}
-                        <Document file={resume} className="d-flex justify-content-center">
+                            <Document file={resume} className="d-flex justify-content-center">
                 {/*if width is greater than 786px, scale by 1.7x if not, 0.6x */}
-                            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-                        </Document>
-                    </Row>
+                                <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+                            </Document>
+                        </Row>
                     </Container>
-                        <div className="modal-footer d-flex justify-content-center mt-3"></div>
+                    <div className="modal-footer d-flex justify-content-center mt-3"></div>
                     </div>
                 </div>
             </div>
