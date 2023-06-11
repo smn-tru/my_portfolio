@@ -1,5 +1,5 @@
 body {
-    background: #0a0109;
+    background: #262626;
 }
 
 i {
@@ -61,9 +61,12 @@ i {
 }
 
 .card {
-    background: rgb(32, 31, 31);
+    background: rgb(67, 65, 65);
     margin-top: 30%;
     padding: 10px;
+    border: 1px solid;
+    border-color: rgba(233, 108, 255, 0.445);
+    border-radius: 6px;
 }
 
 .validate-field {

@@ -36,7 +36,7 @@ function ResumeModal(){
                             target="_blank"
                             style={{ maxWidth: "250px" }}
                         >
-                            &nbsp;Download Resume
+                            &nbsp;Download CV
                         </Button>
                         <Row className="resume">
                 {/* this component takes the link provided above and renders it on your page */}

@@ -136,7 +136,7 @@ function ContactModal(){
                             </li>
                         </ul>
                         </div>
-                        <div className="col-9 ml-4">
+                        <div className="col-9 ms-4">
                         <div className="tab-content" id="tabContent">
                         <div className="tab-pane fade show active" id="emailForm" role="tabpanel">
                             <Formik 
@@ -192,7 +192,6 @@ function ContactModal(){
                                             <i className="fa-regular fa-copy m-2"/>
                                     </a>
                                 </div>
-                                <div className="modal-footer d-flex justify-content-center"></div>
                             </div>
                         </div>
                             
@@ -208,10 +207,8 @@ function ContactModal(){
                                             <i className="fa-regular fa-copy m-2"/>
                                     </a>
                                 </div>
-                                <div className="modal-footer d-flex justify-content-center"></div>
                             </div> 
                         </div>
-
 
                         <div className="tab-pane fade" id="emailInfoCard" role="tabpanel">
                             <div className="card emailInfo">
@@ -225,10 +222,9 @@ function ContactModal(){
                                             <i className="fa-regular fa-copy m-2"/>
                                     </a>
                                 </div>
-                                <div className="modal-footer d-flex justify-content-center"></div>
                             </div> 
                         </div>
-                            
+                        
                         </div>
                         </div>
                     </div>
