@@ -142,7 +142,6 @@ function ContactModal(){
                             <Formik 
                                 enableReinitialize={true}
                                 initialValues={formData}
-                                //onSubmit={submitHandler}
                                 validationSchema={emailFormSchema}>
                                     <Form className="emailForm" onSubmit={sendEmail}>
                                         <div className="md-form mb-2">

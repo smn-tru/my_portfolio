@@ -54,6 +54,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 12px;
   }
   h3 {
     font-size: 20px;
@@ -65,4 +66,18 @@
     -webkit-text-fill-color: transparent;
 
   }
+
+  ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+  }
+
+.viewResume {
+    background: rgb(77, 73, 75);
+}
+
+.viewResume:hover {
+    background: rgba(234,108,255);
+}
   
