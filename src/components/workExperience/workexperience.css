@@ -1,0 +1,11 @@
+.workExp img {
+    height: 450px;
+	width: 700px;
+	background-size: cover;
+	overflow: hidden;
+    border-radius: 2px;
+    opacity: 70%;
+}
+.carousel-inner {
+    margin-top: -100px;
+}

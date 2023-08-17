@@ -10,7 +10,7 @@ function AboutMeModal() {
         <div className="modal fade" id="aboutMeModal" tabIndex="-1" role="dialog" aria-labelledby="aboutMeModal" aria-hidden="true">
             <div className="modal-dialog modal-lg" role="document">
                 <div className="modal-content">
-                    <div className="modal-header text-center">
+                    <div className="modal-header text-start">
                         <h4 className="modal-title w-100 font-weight-bold">About Me</h4>
                         <a type="button" className="close" data-bs-dismiss="modal" aria-label="Close">
                             <span className="close-modal" aria-hidden="true"><i className="fa-regular fa-circle-xmark fa-xl" /></span>

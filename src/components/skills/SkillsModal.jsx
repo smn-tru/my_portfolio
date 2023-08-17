@@ -18,7 +18,7 @@ function SkillsModal(){
         <div className="modal fade" id="skillsModal" tabIndex="-1" role="dialog" aria-labelledby="skillsModal" aria-hidden="true">
             <div className="modal-dialog" role="document">
                 <div className="modal-content">
-                    <div className="modal-header text-center">
+                    <div className="modal-header text-start">
                         <h4 className="modal-title w-100 font-weight-bold">Skills</h4>
                         <a type="button" className="close" data-bs-dismiss="modal" aria-label="Close">
                             <span className="close-modal" aria-hidden="true"><i className="fa-regular fa-circle-xmark fa-xl" /></span>
