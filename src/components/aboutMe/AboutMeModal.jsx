@@ -19,7 +19,7 @@ function AboutMeModal() {
                     <div className="modal-body mx-3">
                         <div className="container">
                             <div className="row"><h1>Hello!</h1></div>
-                            <div className="row"><h2>My name is Sandra and . . .</h2></div>
+                            <div className="row"><h2>My name is Sandra and...</h2></div>
                             <div className="row info">
                                 <img className="col-11 col-sm-11 col-lg-5" src={require("./profile-picture.jpeg")} alt="profile"/>
                                 <div className=" col-11 col-sm-11 col-lg-7 mt-4">I am a Full Stack Software Developer.

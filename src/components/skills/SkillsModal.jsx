@@ -24,8 +24,9 @@ function SkillsModal(){
                             <span className="close-modal" aria-hidden="true"><i className="fa-regular fa-circle-xmark fa-xl" /></span>
                         </a>
                     </div>
-                    <div className="modal-body skills-body mx-3">
-                        <div className="row">
+                    <div className="modal-body skills-body mx-auto">
+                    <div className="row">
+                        <div className="col-12 col-md-6 col-lg-6 mb-2">
                             <div className="flip-card">
                                 <div className="flip-card-inner">
                                     <div className="flip-card-front">
@@ -46,6 +47,9 @@ function SkillsModal(){
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div className="col-12 col-md-6 col-lg-6 mb-2">
                             <div className="flip-card">
                                 <div className="flip-card-inner">
                                     <div className="flip-card-front">
@@ -64,7 +68,8 @@ function SkillsModal(){
                                 </div>
                             </div>
                         </div>
-                        <div className="row mt-3">
+                        
+                        <div className="col-12 col-md-6 col-lg-6 mb-2">
                             <div className="flip-card">
                                 <div className="flip-card-inner">
                                     <div className="flip-card-front">
@@ -81,6 +86,9 @@ function SkillsModal(){
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div className="col-12 col-md-6 col-lg-6 mb-2">
                             <div className="flip-card">
                                 <div className="flip-card-inner">
                                     <div className="flip-card-front">
@@ -103,6 +111,7 @@ function SkillsModal(){
                                 </div>
                             </div>
                         </div>
+                    </div>
                     <div className="modal-footer d-flex justify-content-center mt-3 p-0"></div>
                     </div>
                     <div className="col">
