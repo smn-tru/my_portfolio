@@ -8,11 +8,15 @@
 }
 
 #workExperienceModal .modal-body {
-    margin-top: -110px;
+    margin-top: 0;
     margin-bottom: 10px;
 }
 
 #workExperienceModal .card-body {
     font-size: 12px;
     height: 160px;
+}
+
+#workExperienceModal .card {
+    margin-top: -8px;
 }
