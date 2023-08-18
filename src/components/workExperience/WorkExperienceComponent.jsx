@@ -12,15 +12,16 @@ function WorkExperienceComponent(props){
             <div className="col">
                 <p><small className="text-muted">{workObj.startDate} - {workObj.endDate}</small></p>
                 <div className="row">
-                    <img src={workObj.coverImageUri} alt="company cover page" className="d-block w-100 card-img-top" />
+                    <img src={workObj.coverImageUri} alt="company cover page" className="d-block w-100 img-fluid card-img-top" />
                 </div>
                 <div className="row mt-2">
-                    <h5 className="card-title">{workObj.company}</h5>
+                    <h6 className="card-title">{workObj.company}</h6>
                 </div>
-                <div className="card-body flex-fill" style={{height: "170px"}}>{workObj.companyDescription}</div>
-
-                <div className="row">
-                    <a href={workObj.website.path} target="_blank" rel="noreferrer">{workObj.website.text}</a>
+                <div className="card-body flex-fill">
+                    {workObj.companyDescription}
+                    <div className="row mt-2">
+                        <a href={workObj.website.path} target="_blank" rel="noreferrer">{workObj.website.text}</a>
+                    </div>
                 </div>
             </div>
         </div>

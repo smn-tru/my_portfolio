@@ -26,7 +26,7 @@ const data = [
             //{text: "Shop Fund", path: new URL("http://www.shopfund.com")},
     },
     {
-        company: "Tekton Construction Technologies | Sabio",
+        company: "Tekton Construction Technologies",
         companyDescription: "Tekton helps you hire the right people for your job and maintain their safety documentation, all through a single, simple app on the mobile device you already carry every day.",
         title: "Full Stack Software Engineer",
         startDate: "05/2022",
@@ -85,7 +85,7 @@ function WorkExperienceModal(){
                         <span className="close-modal" aria-hidden="true"><i className="fa-regular fa-circle-xmark fa-xl" /></span>
                     </a>
                 </div>
-                <div className="modal-body mx-3">
+                <div className="modal-body mb-0">
                     <div id="carouselExampleControls" className="carousel slide" style={{backgroundColor: "transparent"}} data-bs-ride="carousel">
                         <div className="carousel-inner">
                             {cards.workExperienceComponent}
@@ -99,10 +99,10 @@ function WorkExperienceModal(){
                             <span className="visually-hidden">Next</span>
                         </button>
                     </div>
+                    <div className="modal-footer d-flex justify-content-center mt-1 p-0"></div>
                 </div>
-                <div className="modal-footer d-flex justify-content-center mt-3 p-0"></div>
                 <div className="col">
-                    <button type="button" className="btn viewResume mb-3 me-5 mt-3 float-end" onClick={onViewResumeClick} data-bs-dismiss="modal">&nbsp;View Resume</button>
+                    <button type="button" className="btn viewResume mb-3 me-5 mt-2 float-end" onClick={onViewResumeClick} data-bs-dismiss="modal">&nbsp;View Resume</button>
                 </div>
             </div>
         </div>

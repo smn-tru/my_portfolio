@@ -1,7 +1,7 @@
 .skills-body .flip-card {
     background-color: transparent;
-    width: 225px;
-    height: 280px;
+    width: 215px;
+    height: 215px;
     -webkit-perspective: 1000px;
     perspective: 1000px;
   }

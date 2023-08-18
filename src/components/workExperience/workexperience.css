@@ -1,11 +1,22 @@
 .workExp img {
-    height: 450px;
+    height: 425px;
 	width: 700px;
 	background-size: cover;
 	overflow: hidden;
     border-radius: 2px;
     opacity: 70%;
 }
-.carousel-inner {
-    margin-top: -100px;
+
+#workExperienceModal .modal-body {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#workExperienceModal .card-body {
+    font-size: 12px;
+    height: 160px;
+}
+
+#workExperienceModal .card {
+    margin-top: -8px;
 }
