@@ -38,6 +38,7 @@ function SkillsModal(){
                                             <li>Bootstrap</li>
                                             <li>CSS</li>
                                             <li>HTML</li>
+                                            <li>CSHTML</li>
                                             <li>JavaScript</li>
                                             <li>jQuery</li>
                                             <li>Markdown</li>
