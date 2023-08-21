@@ -1,5 +1,5 @@
 {
-  "homepage": "https://smn-tru.github.io/portfolio",
+  "homepage": "http://smn-tru.github.io/portfolio",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -15,6 +15,7 @@
     "emailjs": "^4.0.2",
     "emailjs-com": "^3.2.0",
     "formik": "^2.4.1",
+    "gh-pages": "^6.0.0",
     "jquery": "^3.7.0",
     "jquery-ui": "^1.13.2",
     "moment": "^2.29.4",
@@ -35,7 +36,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
