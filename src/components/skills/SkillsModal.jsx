@@ -42,6 +42,7 @@ function SkillsModal(){
                                             <li>JavaScript</li>
                                             <li>jQuery</li>
                                             <li>Markdown</li>
+                                            <li>Razor</li>
                                             <li>React / REACT.js</li>
                                             <li>RDL/XML</li>
                                         </ul>

@@ -58,7 +58,7 @@ function ProjectsModal(){
                     <div className="card-body text-center">
                         <h6 className="card-title mb-3">This feature is undergoing some changes</h6>
                         <p className="card-text">In the meantime, please head over to my Github page to view my current and past projects!</p>
-                        <a type="button" href="https://github.com/smn-tru" target="_blank" className="btn viewResume" rel="noreferrer"><i class="fa-brands fa-github fa-lg"></i>&nbsp;<i class="fa-solid fa-arrow-right fa-lg"></i></a>
+                        <a type="button" href="https://github.com/smn-tru" target="_blank" className="btn viewResume" rel="noreferrer"><i className="fa-brands fa-github fa-lg"></i>&nbsp;<i className="fa-solid fa-arrow-right fa-lg"></i></a>
                     </div>
                 </div>
                 <div className="modal-footer d-flex justify-content-center mt-3 p-0"></div>
