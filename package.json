@@ -15,12 +15,14 @@
     "emailjs": "^4.0.2",
     "emailjs-com": "^3.2.0",
     "formik": "^2.4.1",
-    "gh-pages": "^6.0.0",
     "jquery": "^3.7.0",
     "jquery-ui": "^1.13.2",
     "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
+    "react-cosmos": "^6.0.0-canary.2134bc7.0",
+    "react-cosmos-plugin-open-fixture": "^6.0.0-canary.2134bc7.0",
+    "react-cosmos-plugin-webpack": "^6.0.0-canary.2134bc7.0",
     "react-dom": "^18.2.0",
     "react-pdf": "^7.1.1",
     "react-router-dom": "^6.15.0",
@@ -38,7 +40,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "cosmos": "FAST_REFRESH=false cosmos",
+    "cosmos:export": "cosmos-export"
   },
   "eslintConfig": {
     "extends": [
@@ -59,6 +63,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.0-placeholder-for-preset-env.2"
+    "gh-pages": "^6.0.0"
   }
 }
