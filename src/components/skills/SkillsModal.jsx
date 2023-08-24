@@ -64,7 +64,8 @@ function SkillsModal(){
                                             <li>C#</li>
                                             <li>REST API</li>
                                             <li>SQL / T-SQL</li>
-                                            <li>Web Forms / WinForms</li>
+                                            <li>Web Forms</li>
+                                            <li>WinForms</li>
                                         </ul>
                                     </div>
                                 </div>
