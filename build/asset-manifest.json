@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.2ccf8f83.css",
-    "main.js": "/portfolio/static/js/main.4d9e5fbb.js",
+    "main.css": "/portfolio/static/css/main.984bd35e.css",
+    "main.js": "/portfolio/static/js/main.bfda998b.js",
     "static/js/787.7efd31bd.chunk.js": "/portfolio/static/js/787.7efd31bd.chunk.js",
     "static/media/kredo_main_page.png": "/portfolio/static/media/kredo_main_page.f3f983f9f996fc6e5770.png",
     "static/media/tekton_main_page.png": "/portfolio/static/media/tekton_main_page.9d6c0c16b95f242a1408.png",
     "static/media/profile-picture.jpeg": "/portfolio/static/media/profile-picture.7681d17a45ad3cecdbbd.jpeg",
     "static/media/Sandra Truong_Software Engineer.pdf": "/portfolio/static/media/Sandra Truong_Software Engineer.58074429770bd83ded2d.pdf",
     "index.html": "/portfolio/index.html",
-    "main.2ccf8f83.css.map": "/portfolio/static/css/main.2ccf8f83.css.map",
-    "main.4d9e5fbb.js.map": "/portfolio/static/js/main.4d9e5fbb.js.map",
+    "main.984bd35e.css.map": "/portfolio/static/css/main.984bd35e.css.map",
+    "main.bfda998b.js.map": "/portfolio/static/js/main.bfda998b.js.map",
     "787.7efd31bd.chunk.js.map": "/portfolio/static/js/787.7efd31bd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ccf8f83.css",
-    "static/js/main.4d9e5fbb.js"
+    "static/css/main.984bd35e.css",
+    "static/js/main.bfda998b.js"
   ]
 }

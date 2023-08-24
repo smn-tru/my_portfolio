@@ -1,6 +1,7 @@
 {
   "homepage": "https://smn-tru.github.io/portfolio",
   "version": "0.1.0",
+  "main": "src/index.js",
   "private": false,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
@@ -12,6 +13,7 @@
     "@testing-library/user-event": "^13.2.1",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.2.3",
+    "create-react-app": "4.0.3",
     "emailjs": "^4.0.2",
     "emailjs-com": "^3.2.0",
     "formik": "^2.4.1",
@@ -63,6 +65,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "7.21.11",
     "gh-pages": "^6.0.0"
   }
 }
